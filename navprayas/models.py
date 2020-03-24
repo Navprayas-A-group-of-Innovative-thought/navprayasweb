@@ -75,6 +75,12 @@ S_CATEGORY = (
     ('Senior','Above 13 yrs'),
 )
 
+C_CATEGORY = (
+    ('','select'),
+    ('Junior','10th Passout'),
+    ('Senior','12th Passout'),
+)
+
 P_CATEGORY = (
     ('','select'),
     ('Junior','VII/VIII'),
@@ -171,6 +177,15 @@ class SPR (models.Model):
     order_id    = models.CharField(max_length = 20,blank = True,null = True)
     txn_date    = models.DateTimeField(null = True,blank = True  )
 
+class cc (models.Model):
+    cc_user    = models.OneToOneField(User, on_delete     = models.CASCADE,)
+    Full_name   = models.CharField(verbose_name="Full Name",max_length=50, blank=False, null=False)
+    category    = models.CharField(verbose_name="Category",choices=C_CATEGORY, max_length=12, blank=False)
+    contact     = models.PositiveIntegerField(verbose_name="Contact",validators=[MinValueValidator(1000000000), MaxValueValidator(9999999999)] , blank=False)
+    addess      = models.CharField(verbose_name="Address",max_length=100, blank=False, null=False)
+    # payment     = models.BooleanField(default = True)
+    # order_id    = models.CharField(max_length = 20,blank = True,null = True)
+    # txn_date    = models.DateTimeField(null = True,blank = True  )
 
 class rangotsav (models.Model):
     rangotsav_user  = models.OneToOneField(User, on_delete = models.CASCADE,)

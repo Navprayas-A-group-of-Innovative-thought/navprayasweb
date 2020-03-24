@@ -54,46 +54,60 @@ def status(user):
     if rangotsav1 is not None   :
         status_dict['RANGOTSAV'] = '<span class="text-success">SUCCESSFUL</span>'
     else :
-        status_dict['RANGOTSAV'] = "<a href = '/rangotsav_register/'><b> Click Here </b></a> to register"
+        status_dict['RANGOTSAV'] = "<b>Coming Soon </b>"
+        #status_dict['RANGOTSAV'] = "<a href = '/rangotsav_register/'><b> Click Here </b></a> to register"
     fhs1 = FHS.objects.filter(FHS_user_id = user.id ).first()
     if fhs1 is not None   :
         if fhs1.payment :
-            status_dict['FREE HAND SKETCHING'] ='<span class="text-success">SUCCESSFUL </span> '+str(fhs1.order_id)
+            status_dict['FREE HAND SKETCHING'] ='<span class="text-success">SUCCESSFUL</span> '+str(fhs1.order_id)
         else :
-            status_dict['FREE HAND SKETCHING'] = "<a href = '/FHS_register/'> <b>Click Here</b> </a> to pay"
+            status_dict['FREE HAND SKETCHING'] = "<b>Coming Soon </b>"
+            #status_dict['FREE HAND SKETCHING'] = "<a href = '/FHS_register/'> <b>Click Here</b> </a> to pay"
     else :
-        status_dict['FREE HAND SKETCHING'] = "<a href = '/FHS_register/'><b>Click Here </b></a> to register"
+        status_dict['FREE HAND SKETCHING'] = "<b>Coming Soon </b>"
+        #status_dict['FREE HAND SKETCHING'] = "<a href = '/FHS_register/'><b>Click Here </b></a> to register"
     pr1 = PR.objects.filter(PR_user_id = user.id ).first()
     if pr1 is not None   :
         if pr1.payment :
-            status_dict['PUZZLE RACE'] = '<span class="text-success">SUCCESSFUL </span> ' +str(pr1.order_id) 
+            status_dict['PUZZLE RACE'] = '<span class="text-success">SUCCESSFUL</span> ' +str(pr1.order_id) 
         else :
-            status_dict['PUZZLE RACE'] = "<a href = '/PR_register/'> <b>Click Here </b></a> to pay"
+            status_dict['PUZZLE RACE'] = "<b>Coming Soon </b>"
+            #status_dict['PUZZLE RACE'] = "<a href = '/PR_register/'> <b>Click Here </b></a> to pay"
     else :
-        status_dict['PUZZLE RACE'] = "<a href = '/PR_register/'> <b>Click Here </b></a> to register"
+        status_dict['PUZZLE RACE'] = "<b>Coming Soon </b>"
+        #status_dict['PUZZLE RACE'] = "<a href = '/PR_register/'> <b>Click Here </b></a> to register"
     mtse1 = MTSE.objects.filter(MTSE_user_id = user.id ).first()
     if mtse1 is not None   :
         if mtse1.payment :
             status_dict['MTSE'] ='<span class="text-success">SUCCESSFUL</span> '+ str(mtse1.order_id)
         else :
-            status_dict['MTSE'] = "<a href = '/MTSE_register/'> <b>Click Here </b></a> to pay"
+            status_dict['MTSE'] = "<b>Coming Soon </b>"
+            # status_dict['MTSE'] = "<a href = '/MTSE_register/'> <b>Click Here </b></a> to pay"
     else :
-        status_dict['MTSE'] = "<a href = '/MTSE_register/'> <b>Click Here </b></a> to register"
+        status_dict['MTSE'] = "<b>Coming Soon </b>"
+        #status_dict['MTSE'] = "<a href = '/MTSE_register/'> <b>Click Here </b></a> to register"
     chess1 = chess.objects.filter(chess_user_id = user.id ).first()
     if chess1 is not None   :
         if chess1.payment :
-            status_dict['CHESS'] = '<span class="text-success">SUCCESSFUL </span> '+str(chess1.order_id)
+            status_dict['CHESS'] = '<span class="text-success">SUCCESSFUL</span> '+str(chess1.order_id)
         else :
-            status_dict['CHESS'] = "<a href = '/chess_register/'> <b>Click Here </b></a> to pay"
+            status_dict['CHESS'] = "<b>Coming Soon </b>"
+            #status_dict['CHESS'] = "<a href = '/chess_register/'> <b>Click Here </b></a> to pay"
     else :
-        status_dict['CHESS'] = "<a href = '/chess_register/'> <b>Click Here </b></a> to register"
+        status_dict['CHESS'] = "<b>Coming Soon </b>"
+        #status_dict['CHESS'] = "<a href = '/chess_register/'> <b>Click Here </b></a> to register"
     spr1 = SPR.objects.filter(SPR_user_id = user.id ).first()
     if spr1 is not None   :
         status_dict['POEM & STORY WRITIING'] = '<span class="text-success">SUCCESSFUL</span>'
     else :
-        status_dict['POEM & STORY WRITIING'] = "<a href = '/SPR_register/'> <b>Click Here </b></a> to register"
+        status_dict['POEM & STORY WRITIING'] = "<b>Coming Soon </b>"
+        #status_dict['POEM & STORY WRITIING'] = "<a href = '/SPR_register/'> <b>Click Here </b></a> to register"
+    cc1 = cc.objects.filter(cc_user_id = user.id ).first()
+    if cc1 is not None   :
+        status_dict['Career Counselling'] = '<span class="text-success">SUCCESSFUL</span>'
+    else :
+        status_dict['Career Counselling'] = "<a href = '/cc_register/'> <b>Click Here </b></a> to register"
     return status_dict
-
 
 
 
@@ -525,6 +539,30 @@ def SPR_register(request):
     else:
         return render(request, 'navprayas/home_links/submitted.html', {})
     return render(request, 'navprayas/exam_forms/SPR_register.html', {'form': form})
+
+# CC
+# *************************
+@login_required
+def cc_register(request):
+
+    cc_filled = cc.objects.filter(cc_user=request.user).first() #if returns none then u can fill form
+
+    if cc_filled is None:
+        if request.method == 'POST':
+            form = cc_form(request.POST)
+            if form.is_valid():
+                cc_filled = form.save(commit=False)
+                cc_filled.cc_user=request.user
+                cc_filled.save()
+                
+                return redirect('index')
+        else:
+            form = cc_form()
+            
+
+    else:
+        return render(request, 'navprayas/home_links/submitted.html', {})
+    return render(request, 'navprayas/exam_forms/cc_register.html', {'form': form})
 
 # *************************
 # chess

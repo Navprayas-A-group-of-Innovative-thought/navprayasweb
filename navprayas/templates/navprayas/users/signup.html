@@ -28,7 +28,8 @@
                 {% endif %}
             {% endblock %} <br>
 
-							<h2>Create an account</h2><hr>
+              <h2>Create an account</h2><hr>
+              <p>After creating your account, login with your credentials again.</p>
 							<form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy }}
@@ -40,7 +41,7 @@
             
               </form>
               <hr/>
-                <small>Already Have an Account !!</small> <a href={% url 'login' %} style="color:red">Sign In</a> 
+                <small>Already Have an Account!</small> <a href={% url 'login' %} style="color:red">Sign In Here.</a> 
 						</div>
 					</div>
 

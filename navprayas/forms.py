@@ -162,6 +162,17 @@ class SPR_form(forms.ModelForm):
             'contact',
             'addess',
          )
+
+# Career Counselling
+class cc_form(forms.ModelForm):
+    class Meta:
+        model = cc
+        fields = (
+            'Full_name',
+            'category',
+            'contact',
+            'addess',
+         )
 # *************
 # Chess Competition Form
 # *************

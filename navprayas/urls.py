@@ -47,12 +47,13 @@ urlpatterns = [
     # urls for registering to exams
     # *****************************
 
-    path('MTSE_register/', views.MTSE_register, name='MTSE_register'),
-    path('PR_register/', views.PR_register, name='PR_register'),
-    path('SPR_register/', views.SPR_register, name='SPR_register'),
-    path('rangotsav_register/', views.rangotsav_register, name='rangotsav_register'),
-    path('FHS_register/', views.FHS_register, name='FHS_register'),
-    path('chess_register/', views.chess_register, name='chess_register'),
+    # path('MTSE_register/', views.MTSE_register, name='MTSE_register'),
+    # path('PR_register/', views.PR_register, name='PR_register'),
+    # path('SPR_register/', views.SPR_register, name='SPR_register'),
+    path('cc_register/', views.cc_register, name='cc_register'),
+    # path('rangotsav_register/', views.rangotsav_register, name='rangotsav_register'),
+    # path('FHS_register/', views.FHS_register, name='FHS_register'),
+    # path('chess_register/', views.chess_register, name='chess_register'),
 
    # *****************************
     # paytm

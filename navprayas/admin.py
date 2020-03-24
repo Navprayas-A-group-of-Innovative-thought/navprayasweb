@@ -7,6 +7,7 @@ from .models import *
 admin.site.register(MTSE)
 admin.site.register(PR)
 admin.site.register(SPR)
+admin.site.register(cc)
 admin.site.register(rangotsav)
 admin.site.register(chess)
 admin.site.register(FHS)
