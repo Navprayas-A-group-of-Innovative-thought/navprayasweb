@@ -3,20 +3,26 @@
 
 {% block title %}Navprayas Home{% endblock %}
 
+{% block lastUpdated%}
+<i style="color: white;font-size: 12px ;">
+  Site last Updated at {{lastModified}}
+</i>
+{%endblock%}
+
 
 {% block content %}
 
-<i style="color: blue;font-size: 12px ;">
-  Site last Updated at {{lastModified}}
-</i>
+
 
 	<!-- Start Banner Area -->
 
 	<section class="banner-area relative">
+
 		<div class="overlay overlay-bg"></div>
 		<div class="container">
 			<div class="row fullscreen align-items-center justify-content-between">
 				<div class="col-lg-6 col-md-7 col-sm-8">
+
 					<div class="banner-content">
 							<div>
 									<marquee behavior="scroll" direction="left"><h3>Registration for Coding Launchpad Webinar is <span style='color: red'>live now!</span></h3></marquee>
@@ -93,7 +99,8 @@
 
 
 
-		</div>
+    </div>
+
 	</section>
 	<!-- End Carousel Area -->
 {% endblock %}
