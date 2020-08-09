@@ -29,9 +29,17 @@ FHS_FEE     = '10'
 PR_FEE      = '40'
 # _FEE
 
+
 # Create your views here.
 def index(request):
-    return render(request, 'navprayas/home_links/index.html', {})
+    from .lastModified import lastModified
+    lm = lastModified.date
+
+
+
+    return render(request, 'navprayas/home_links/index.html', {
+        'lastModified' : lm
+    })
 
 def about(request):
     return render(request, 'navprayas/home_links/about.html', {})
@@ -69,7 +77,7 @@ def status(user):
     pr1 = PR.objects.filter(PR_user_id = user.id ).first()
     if pr1 is not None   :
         if pr1.payment :
-            status_dict['PUZZLE RACE'] = '<span class="text-success">SUCCESSFUL</span> ' +str(pr1.order_id) 
+            status_dict['PUZZLE RACE'] = '<span class="text-success">SUCCESSFUL</span> ' +str(pr1.order_id)
         else :
             status_dict['PUZZLE RACE'] = "<b>Coming Soon </b>"
             #status_dict['PUZZLE RACE'] = "<a href = '/PR_register/'> <b>Click Here </b></a> to pay"
@@ -111,7 +119,7 @@ def status(user):
 
 
 
-    
+
 
 
 
@@ -192,8 +200,8 @@ def handlerequest(request):
 def pay(user_id,price,form):
     oid = 'O19'+OID()
     form.order_id = oid
-    form.save() 
-    
+    form.save()
+
 
     param_dict = {
             'MID': Secret.PAYMENT_MERCHANT_ID,
@@ -289,14 +297,14 @@ def register(request):
             'form2' : form2,
             }
             return render(request, 'navprayas/users/signup.html',context)
-        
+
     else:
         form = SignUpForm()
         form2 = SignUpFormProfile()
     context = {
         'form' : form,
         'form2' : form2,
-    }    
+    }
     return render(request, 'navprayas/users/signup.html',context)
 
 
@@ -345,7 +353,7 @@ def MTSE_register(request):
                 return render(request, 'navprayas/exam_forms/MTSE_register.html', {'form': form})
         else:
             form = MTSE_form()
-            return render(request, 'navprayas/exam_forms/MTSE_register.html', {'form': form})           
+            return render(request, 'navprayas/exam_forms/MTSE_register.html', {'form': form})
     elif MTSE_filled.payment is False:
         if request.method == 'POST' :
             form = MTSE_form(request.POST,instance=request.user.mtse)
@@ -390,10 +398,10 @@ def FHS_register(request):
                 return render(request, 'navprayas/exam_forms/FHS_register.html', {'form': form})
 
         else:
-            form = FHS_form() 
-            return render(request, 'navprayas/exam_forms/FHS_register.html', {'form': form})           
+            form = FHS_form()
+            return render(request, 'navprayas/exam_forms/FHS_register.html', {'form': form})
 
-# if payment is not done but form is filled               
+# if payment is not done but form is filled
     elif FHS_filled.payment is False:
         if request.method == 'POST' :
             form = FHS_form(request.POST,instance=request.user.fhs)
@@ -431,10 +439,10 @@ def chess_register(request):
                 form = chess_form(request.POST)
                 return render(request, 'navprayas/exam_forms/chess_register.html', {'form': form})
         else:
-            form = chess_form() 
-            return render(request, 'navprayas/exam_forms/chess_register.html', {'form': form})           
+            form = chess_form()
+            return render(request, 'navprayas/exam_forms/chess_register.html', {'form': form})
 
-# if payment is not done but form is filled               
+# if payment is not done but form is filled
     elif chess_filled.payment is False:
         if request.method == 'POST' :
             form = chess_form(request.POST,instance=request.user.chess)
@@ -470,10 +478,10 @@ def PR_register(request):
                 form = PR_form(request.POST)
                 return render(request, 'navprayas/exam_forms/PR_register.html', {'form': form})
         else:
-            form = PR_form() 
-            return render(request, 'navprayas/exam_forms/PR_register.html', {'form': form})           
+            form = PR_form()
+            return render(request, 'navprayas/exam_forms/PR_register.html', {'form': form})
 
-# if payment is not done but form is filled               
+# if payment is not done but form is filled
     elif PR_filled.payment is False:
         if request.method == 'POST' :
             form = PR_form(request.POST,instance=request.user.pr)
@@ -530,11 +538,11 @@ def SPR_register(request):
                 SPR_filled = form.save(commit=False)
                 SPR_filled.SPR_user=request.user
                 SPR_filled.save()
-                
+
                 return redirect('index')
         else:
             form = SPR_form()
-            
+
 
     else:
         return render(request, 'navprayas/home_links/submitted.html', {})
@@ -554,11 +562,11 @@ def cc_register(request):
                 cc_filled = form.save(commit=False)
                 cc_filled.cc_user=request.user
                 cc_filled.save()
-                
+
                 return redirect('index')
         else:
             form = cc_form()
-            
+
 
     else:
         return render(request, 'navprayas/home_links/submitted.html', {})

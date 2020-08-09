@@ -106,13 +106,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# email 
+# email
 # run > python -m smtpd -n -c DebuggingServer localhost:1025
 #EMAIL_HOST = 'localhost'
 #EMAIL_PORT = 1025
 
 
-# for getting email to reset password using gmail 
+# for getting email to reset password using gmail
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -125,6 +125,7 @@ EMAIL_HOST_PASSWORD = Secret.PASS_FOR_EMAIL
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -134,7 +135,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+TIME_ZONE =  'Asia/Calcutta'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
