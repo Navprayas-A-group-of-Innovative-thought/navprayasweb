@@ -8,7 +8,7 @@ with open("navprayas/lastModified.txt", "r+") as f:
     y = f.readline()
     print("reading y as ",y)
 
-class lastModified:
+class lastMogitdified:
     date = y
 
 print(lastModified.date)
