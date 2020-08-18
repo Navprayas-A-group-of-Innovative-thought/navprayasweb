@@ -1,9 +1,21 @@
 const team = [
     {
-        photoName : 'kedar.jpg',
-        name : "Kedar Nath",
-        college : "IIT Guwahati",
-        post : "Coordinator"
+        photoName : 'vikash.jpg',
+        name : "Vikash Kumar",
+        college : "IIT Kharagpur Passout",
+        post : "Organising Head"
+    },
+    {
+        photoName : 'govind.jpg',
+        name : "Govind Nath",
+        college : "NIT Surathkal",
+        post : "Organiser"
+    },
+    {
+        photoName : 'Budhdev.jpg',
+        name : "Budhdev Kumar",
+        college : "NIT Patna",
+        post : "Organiser"
     },
     {
         photoName : 'ranjan.jpg',
