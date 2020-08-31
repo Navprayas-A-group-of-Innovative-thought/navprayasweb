@@ -767,7 +767,7 @@ h3 {
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 18px; path('team/', views.team, name='contact'),
 }
 
 h5 {
@@ -2616,6 +2616,8 @@ nav a:hover {
 .switch-wrap p {
   margin: 0;
 }
+
+
 
 @font-face {
   font-family: "Algerian Regular";
