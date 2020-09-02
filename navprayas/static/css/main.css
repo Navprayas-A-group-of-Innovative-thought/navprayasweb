@@ -2617,7 +2617,11 @@ nav a:hover {
   margin: 0;
 }
 
-
+#timerCnt{
+  border: 1px solid rgba(224, 0, 59, 0.8);
+  font-size: 1.8rem;
+  font-family: 'Montserrat', sans-serif;
+}
 
 @font-face {
   font-family: "Algerian Regular";
