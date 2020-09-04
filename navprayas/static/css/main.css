@@ -2623,6 +2623,14 @@ nav a:hover {
   font-family: 'Montserrat', sans-serif;
 }
 
+#frontNotificationBox{
+  border: 1px solid rgba(224, 0, 59, 0.8);
+  padding: 2%;
+  margin: 2px;
+}
+.inNotificationArea{
+  font: size 1rem;
+}
 @font-face {
   font-family: "Algerian Regular";
   src: url("../static/css/fonts/Algerian.ttf") format("truetype"), local('Algerian');
