@@ -2622,6 +2622,11 @@ nav a:hover {
   font-size: 1.8rem;
   font-family: 'Montserrat', sans-serif;
 }
+#frontNotificationBox{
+  border: 1px solid rgba(224, 0, 59, 0.8);
+  padding: 1%;
+  margin:1%;
+}
 
 @font-face {
   font-family: "Algerian Regular";
