@@ -2546,6 +2546,9 @@ nav a:hover {
   .footer-social {
     margin-top: 10px;
   }
+  .caraBox{
+    padding: 15px;
+  }
 }
 
 .footer-social a {
@@ -2632,6 +2635,11 @@ nav a:hover {
   margin-left: 15px;
 
 }
+.extraCara{
+  background-color: rgba(224, 0, 59, 0.8) ;
+  padding: 7%;
+}
+
 
 #frontNotificationBox{
   border: 1px solid rgba(224, 0, 59, 0.8);
