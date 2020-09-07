@@ -2627,6 +2627,11 @@ nav a:hover {
   padding: 1%;
   margin:1%;
 }
+#frontNotificationBox li{
+  list-style-type: square;
+  margin-left: 15px;
+
+}
 
 @font-face {
   font-family: "Algerian Regular";
