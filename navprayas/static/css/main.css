@@ -2635,6 +2635,9 @@ nav a:hover {
   margin-left: 15px;
 
 }
+.frontItem{
+  text-align: center;
+}
 .extraCara{
   background-color: rgba(224, 0, 59, 0.8) ;
   padding: 7%;
