@@ -31,16 +31,16 @@ PR_FEE      = '40'
 
 
 # Create your views here.
-# def index(request):
-#     from .lastModified import lastModified
-#     lm = lastModified.date
+def index(request):
+    from .lastModified import lastModified
+    lm = lastModified.date
 
-#     if request.headers['x-forwarded-proto'] != 'https':
-#         return redirect("https://navprayas.in")
+    # if request.headers['x-forwarded-proto'] != 'https':
+    #     return redirect("https://navprayas.in")
 
-#     return render(request, 'navprayas/home_links/index.html', {
-#         'lastModified' : lm
-#     })
+    return render(request, 'navprayas/home_links/index.html', {
+        'lastModified' : lm
+    })
 
 def about(request):
     return render(request, 'navprayas/home_links/about.html', {})
