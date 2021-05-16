@@ -1,127 +1,126 @@
-{% extends 'navprayas/base.html' %}
-{% load static %}
-
-{% block title %}Navprayas Home{% endblock %}
-
-{% block lastUpdated%}
+{% extends 'navprayas/base.html' %} {% load static %} {% block title %}Navprayas Home{% endblock %} {% block lastUpdated%}
 <i style="color: white;font-size: 12px ;">
   Site last Updated at {{lastModified}}
-</i>
-{%endblock%}
-
-
-{% block content %}
+</i> {%endblock%} {% block content %}
 
 
 
 
 
 <section class="section-gap achivement-area">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-15">
-        <div class="achivement-content">
-          <h1 class="text-center">Welcome!</h1>
-          <div>
-            <marquee behavior="alternate" direction="right">
-              <h2>All Events are <span style='color: red'> <strong>FREE</strong></span></h2>
-            </marquee>
-            <br><br>
-            <br>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-15">
+                <div class="achivement-content">
+                    <h1 class="text-center">Welcome!</h1>
+                    <div>
+                        <marquee behavior="alternate" direction="right">
+                            <h2>All Events are <span style='color: red'> <strong>FREE</strong></span></h2>
+                        </marquee>
+                        <br><br>
+                        <br>
 
-            
-            <div id="frontNotificationBox">
-			  <h1><u>Notifications</u></h1>
-			  
-			  <ul>
-          <li>
-            <h4>MTSE 2021 Registration is live.</h4>
-            <a href="/events/#mtse" target="blank" class="primary-btn inNotificationArea">Click Here<span class="lnr lnr-arrow-right"></span></a><br>
-          </li>
-         
-				  <li>
-					<h4>How To Fill MTSE Form (Video Tutorial)</h4>
-					<a href="http://link.navprayas.in/mtse_tutorial" target="blank" class="primary-btn inNotificationArea">Click Here<span class="lnr lnr-arrow-right"></span></a><br>
-				  </li>
-				 
-             
-			</ul>
-            </div>
-          </div><br><br>
-          
-          <div class="container-fluid" style="background-color: rgba(224, 0, 59, 0.8);">
-            <br>
-            <!-- <center><h1 style="color: white;">Navprayas 2021</h1></center> -->
-            <div class="frontItem">
-              <img src="{% static 'img\Navprayas2021 Timeline.jpeg' %}" alt="mtse" class="img-fluid">
-            </div>
-          </div>
-         
-          <br><br>
 
-          <h4 class="text-center">We feel delighted to announce the advent of upgraded online version of NAVPRAYAS in
-            this pandemic situation.<br>
-            Here we present our events for this year.</h4>
-          <!-- <a href="#gallery" class="primary-btn">Take a glimpse at our events!<span class="lnr lnr-arrow-right"></span></a> -->
+                        <div id="frontNotificationBox">
+                            <h1><u>Notifications</u></h1>
+
+                            <ul>
+                                <li>
+                                    <h4>MTSE 2021 Registration is live.</h4>
+                                    <a href="/events/#mtse" target="blank" class="primary-btn inNotificationArea">Click Here<span class="lnr lnr-arrow-right"></span></a><br>
+                                </li>
+
+                                <li>
+                                    <h4>How To Fill MTSE Form (Video Tutorial)</h4>
+                                    <a href="http://link.navprayas.in/mtse_tutorial" target="blank" class="primary-btn inNotificationArea">Click Here<span class="lnr lnr-arrow-right"></span></a><br>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div><br><br>
+
+                    <div class="container-fluid" style="background-color: rgba(224, 0, 59, 0.8);">
+                        <br>
+                        <!-- <center><h1 style="color: white;">Navprayas 2021</h1></center> -->
+                        <div class="frontItem">
+                            <img src="{% static 'img\Navprayas2021 Timeline.jpeg' %}" alt="mtse" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <br><br>
+
+                    <h4 class="text-center">We feel delighted to announce the advent of upgraded online version of NAVPRAYAS in this pandemic situation.<br> Here we present our events for this year.</h4>
+                    <!-- <a href="#gallery" class="primary-btn">Take a glimpse at our events!<span class="lnr lnr-arrow-right"></span></a> -->
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="white-bg">
-      <div class="container">
-        <div class="section-top-border">
+        <div class="white-bg">
+            <div class="container">
+                <div class="section-top-border">
 
-          <div class="row gallery-item">
-            <div class="col-md-4" style="padding: 2mm">
-              <a href="{% static 'img/mtseposter.jpg' %}" class="img-pop-up">
-                <img src="{% static 'img/mtseexam.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
+                    <div class="row gallery-item">
+                        <div class="col-md-4" style="padding: 2mm">
+                            <a href="{% static 'img/mtseposter.jpg' %}" class="img-pop-up">
+                                <img src="{% static 'img/mtseexam.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
 
-              <a href="/events/#mtse" class="primary-btn">MTSE<span class="lnr lnr-arrow-right"></span></a><br>
-            </div>
-            <div class="col-md-4" style="padding: 2mm">
-              <a href="{% static 'img/puzzlerace.jpeg' %}" class="img-pop-up">
-                <img src="{% static 'img/puzzle.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
-              <a href="/events/#puzzlerace" class="primary-btn">Puzzle race<span
+                            <a href="/events/#mtse" class="primary-btn">MTSE<span class="lnr lnr-arrow-right"></span></a><br>
+                        </div>
+                        <div class="col-md-4" style="padding: 2mm">
+                            <a href="{% static 'img/puzzlerace.jpeg' %}" class="img-pop-up">
+                                <img src="{% static 'img/puzzle.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
+                            <a href="/events/#puzzlerace" class="primary-btn">Puzzle race<span
                   class="lnr lnr-arrow-right"></span></a><br>
-            </div>
-            <div class="col-md-4" style="padding: 2mm">
-              <a href="{% static 'img/navRachna2020.jpeg' %}" class="img-pop-up">
-                <img src="{% static 'img/models.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
-              <a href="/events/#navrachna" class="primary-btn">Navrachna<span
+                        </div>
+                        <div class="col-md-4" style="padding: 2mm">
+                            <a href="{% static 'img/navRachna2020.jpeg' %}" class="img-pop-up">
+                                <img src="{% static 'img/models.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
+                            <a href="/events/#navrachna" class="primary-btn">Navrachna<span
                   class="lnr lnr-arrow-right"></span></a><br>
-            </div><br>
-            <div class="col-md-4" style="padding: 2mm">
-              <a href="{% static 'img/syncWithDancePoster.jpeg' %}" class="img-pop-up">
-                <img src="{% static 'img/dance.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
-              <a href="/events/#swd" class="primary-btn">SyncWithDance<span class="lnr lnr-arrow-right"></span></a><br>
-            </div><br>
-            <div class="col-md-4" style="padding: 2mm">
-              <a href="{% static 'img/Kaavyakala.jpeg' %}" class="img-pop-up">
-                <img src="{% static 'img/spr.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
-              <a href="/events/#spr" class="primary-btn">Kaavyakala<span class="lnr lnr-arrow-right"></span></a><br>
-            </div><br>
-            <div class="col-md-4" style="padding: 2mm">
-              <a href="{% static 'img/CAREER.jpg' %}" class="img-pop-up">
-                <img src="{% static 'img/careerc.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
-              <a href="/events/#careerc" class="primary-btn">Career counselling<span
+                        </div><br>
+                        <div class="col-md-4" style="padding: 2mm">
+                            <a href="{% static 'img/syncWithDancePoster.jpeg' %}" class="img-pop-up">
+                                <img src="{% static 'img/dance.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
+                            <a href="/events/#swd" class="primary-btn">SyncWithDance<span class="lnr lnr-arrow-right"></span></a><br>
+                        </div><br>
+                        <div class="col-md-4" style="padding: 2mm">
+                            <a href="{% static 'img/Kaavyakala.jpeg' %}" class="img-pop-up">
+                                <img src="{% static 'img/spr.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
+                            <a href="/events/#spr" class="primary-btn">Kaavyakala<span class="lnr lnr-arrow-right"></span></a><br>
+                        </div><br>
+                        <div class="col-md-4" style="padding: 2mm">
+                            <a href="{% static 'img/CAREER.jpg' %}" class="img-pop-up">
+                                <img src="{% static 'img/careerc.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
+                            <a href="/events/#careerc" class="primary-btn">Career counselling<span
                   class="lnr lnr-arrow-right"></span></a><br>
-            </div><br>
-            <div class="col-md-4" style="padding: 2mm">
-              <a href="{% static 'img/code mantra.jpg' %}" class="img-pop-up">
-                <img src="{% static 'img/code.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
-              <a href="/events/#codemantra" class="primary-btn">Code Mantra<span
+                        </div><br>
+                        <div class="col-md-4" style="padding: 2mm">
+                            <a href="{% static 'img/code mantra.jpg' %}" class="img-pop-up">
+                                <img src="{% static 'img/code.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
+                            <a href="/events/#codemantra" class="primary-btn">Code Mantra<span
                   class="lnr lnr-arrow-right"></span></a><br>
-            </div>
-            <!-- <div class="col-md-4" style="padding: 2mm">
+                        </div><br>
+                        <div class="col-md-4" style="padding: 2mm">
+                            <a href="{% static 'img/Thevocalist.jpg' %}" class="img-pop-up">
+                                <img src="{% static 'img/Thevocalist.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
+                            <a href="/events/#thevocalist" class="primary-btn">The Vocalist<span class="lnr lnr-arrow-right"></span></a><br>
+                        </div><br>
+                        <div class="col-md-4" style="padding: 2mm">
+                            <a href="{% static 'img/istehaar.jpeg' %}" class="img-pop-up">
+                                <img src="{% static 'img/istehaar.jpeg' %}" alt="MTSE" class="img-fluid"><br><br></a>
+                            <a href="/events/#istehaar" class="primary-btn">Istihaar-e-kala<span class="lnr lnr-arrow-right"></span></a><br>
+                        </div>
+                        <!-- <div class="col-md-4" style="padding: 2mm">
               <a href="{% static 'img/PTDay3.jpeg' %}" class="img-pop-up">
                 <img src="{% static 'img/pTalks.jpg' %}" alt="MTSE" class="img-fluid"><br><br></a>
               <a href="/events/#profTalks" class="primary-btn">Professional Talks (Day 3)<span
                   class="lnr lnr-arrow-right"></span></a><br>
             </div> -->
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <!-- End Banner Area -->
@@ -129,32 +128,31 @@
 <!-- End Skill Area -->
 <!-- Start Carousel Area -->
 <div id="carouselExampleControls" class="carousel slide extraCara" data-ride="carousel">
-  <div class="carousel-inner caraBox">
-    <div class="carousel-item active">
-      <div class="item">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-xl-6 col-md-4">
-              <div class="carousel-thumb">
-                <img src="{% static 'img\mtseposter.jpeg' %}" alt="mtse" class="img-fluid">
-              </div>
-            </div>
-            <div class="col-xl-6 col-md-7">
-              <div class="carousel-content">
-                <h2 class="text-white">MTSE 2021</h2>
-                <p class="text-white mb-30">
-                  BRACE YOURSELF! Navprayas brings back the flagship event MTSE (in a complete ONLINE way). Get your pen
-                  and mind ready to hustle with bundles of questions.
-                </p>
-                <a href="http://link.navprayas.in/mtse" class="primary-btn white" target="_blank">Register<span
+    <div class="carousel-inner caraBox">
+        <div class="carousel-item active">
+            <div class="item">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-6 col-md-4">
+                            <div class="carousel-thumb">
+                                <img src="{% static 'img\mtseposter.jpeg' %}" alt="mtse" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-7">
+                            <div class="carousel-content">
+                                <h2 class="text-white">MTSE 2021</h2>
+                                <p class="text-white mb-30">
+                                    BRACE YOURSELF! Navprayas brings back the flagship event MTSE (in a complete ONLINE way). Get your pen and mind ready to hustle with bundles of questions.
+                                </p>
+                                <a href="http://link.navprayas.in/mtse" class="primary-btn white" target="_blank">Register<span
                     class="lnr lnr-arrow-right"></span></a>
-              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <!-- <div class="carousel-item">
+        <!-- <div class="carousel-item">
       <div class="item">
         <div class="container">
           <div class="row align-items-center">
@@ -350,16 +348,16 @@
     </div>
   </div> -->
 
-<a class="carousel-control-prev carouselButt" href="#carouselExampleControls" role="button" data-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="sr-only">Previous</span>
-</a>
-<a class="carousel-control-next carouselButt" href="#carouselExampleControls" role="button" data-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="sr-only">Next</span>
-</a>
-</div></div>
+        <a class="carousel-control-prev carouselButt" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next carouselButt" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
 <!-- End Carousel Area -->
 
 {% endblock %}
-
