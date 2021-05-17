@@ -35,8 +35,11 @@ def index(request):
     from .lastModified import lastModified
     lm = lastModified.date
 
-    if request.headers['x-forwarded-proto'] != 'https':
-        return redirect("https://navprayas.in")
+    try:
+        if request.headers['x-forwarded-proto'] != 'https':
+            return redirect("https://navprayas.in")
+    except:
+        pass
 
     return render(request, 'navprayas/home_links/index.html', {
         'lastModified' : lm
