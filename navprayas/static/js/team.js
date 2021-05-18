@@ -34,7 +34,7 @@ const team = [{
     //     post: "Organiser"
     // },
     {
-        photoName: 'manisha.JPG',
+        photoName: 'manisha.jpeg',
         name: "Manisha Kumari",
         college: "NSEC Kolkata",
         post: "Event Manager"
