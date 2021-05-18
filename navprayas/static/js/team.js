@@ -1,32 +1,54 @@
-const team = [
-    {
-        photoName : 'vikash.jpg',
-        name : "Vikash Kumar",
-        college : "IIT Kharagpur Passout",
-        post : "Organising Head"
+const team = [{
+        photoName: 'ranjan.jpeg',
+        name: "Ranjan Kumar",
+        college: "IIT (ISM) Dhanbad Passout",
+        post: "Chairperson"
     },
     {
-        photoName : 'govind.jpg',
-        name : "Govind Nath",
-        college : "NIT Surathkal",
-        post : "Organiser"
+        photoName: 'abhay.jpeg',
+        name: "Abhay Kumar",
+        college: "NIT Hamirpur",
+        post: "General Secretary"
     },
     {
-        photoName : 'Budhdev.jpg',
-        name : "Budhdev Kumar",
-        college : "NIT Patna",
-        post : "Organiser"
+        photoName: 'saras.jpeg',
+        name: "Saraswati Kumari",
+        college: "MNNIT Allahabad",
+        post: "Organizer Head"
+    },
+    //     photoName: 'vikash.jpg',
+    //     name: "Vikash Kumar",
+    //     college: "IIT Kharagpur",
+    //     post: "Organising Head"
+    // },
+    // {
+    //     photoName: 'govind.jpg',
+    //     name: "Govind Nath",
+    //     college: "NITK Surathkal",
+    //     post: "Organiser"
+    // },
+    // {
+    //     photoName: 'Budhdev.jpg',
+    //     name: "Budhdev Kumar",
+    //     college: "BIT Patna",
+    //     post: "Organiser"
+    // },
+    {
+        photoName: 'manisha.jpg',
+        name: "Manisha Kumari",
+        college: "NSEC Kolkata",
+        post: "Event Manager"
     },
     {
-        photoName : 'ranjan.jpg',
-        name : "Ranjan Kumar",
-        college : "IIT ISM Dhanbad",
-        post : "Coordinator"
+        photoName: 'rahul.jpg',
+        name: "Rahul Kumar",
+        college: "NIT Jalandhar",
+        post: "Event Organizer"
     },
 
 ]
 
-function teamHtml(member){
+function teamHtml(member) {
 
     const val = `
     <div class="col-md-3">
@@ -43,7 +65,6 @@ function teamHtml(member){
 
 }
 
-for(const member of team){
+for (const member of team) {
     document.write(teamHtml(member));
 }
-
