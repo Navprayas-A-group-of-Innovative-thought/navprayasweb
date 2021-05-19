@@ -37,13 +37,13 @@ const team = [{
         photoName: 'manisha.jpeg',
         name: "Manisha Kumari",
         college: "NSEC Kolkata",
-        post: "Event Manager"
+        post: "Event Co-ordinator"
     },
     {
         photoName: 'rahul.jpg',
         name: "Rahul Kumar",
         college: "NIT Jalandhar",
-        post: "Event Organizer"
+        post: "Event Co-ordinator"
     },
 
 ]
