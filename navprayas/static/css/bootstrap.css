@@ -547,12 +547,6 @@ mark,
     height: auto;
 }
 
-.img-fluid-poster {
-  max-width: 100%;
-  height: auto;
-  width: 30%;
-  height: 30%;
-}
 
 .img-thumbnail {
     padding: 0.25rem;
