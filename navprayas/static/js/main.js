@@ -2,6 +2,10 @@
 $(document).ready(function(){
 	"use strict";
 
+    var wdth = $(".poster").width();
+    console.log("width is "+wdth);
+    $(".poster").css({"height": wdth+'px'});
+
 	var window_width 	 = $(window).width(),
 	window_height 		 = window.innerHeight,
 	header_height 		 = $(".default-header").height(),
@@ -11,7 +15,6 @@ $(document).ready(function(){
 
 	$(".fullscreen").css("height", window_height)
 	$(".fitscreen").css("height", fitscreen);
-
      
      // -------   Active Mobile Menu-----//
 
