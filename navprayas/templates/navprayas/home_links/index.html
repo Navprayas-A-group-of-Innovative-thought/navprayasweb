@@ -3,21 +3,21 @@
   Site last Updated at {{lastModified}}
 </i> {%endblock%} {% block content %}
 <style>
-    #puzzlerace{
-        animation: animate 1.5s linear infinite;
+    #puzzlerace {
+        animation: animate 0.5s linear infinite;
     }
-
-    @keyframes animate{
-   0%{
-     opacity: 0;
-   }
-   50%{
-     opacity: 0.7;
-   }
-   100%{
-     opacity: 0;
-   }
- }
+    
+    @keyframes animate {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 </style>
 
 <section class="section-gap achivement-area">
@@ -29,7 +29,9 @@
                     <div>
                         <marquee behavior="alternate" direction="right">
                             <h2>All Events are <span style='color: red'> <strong>FREE!</strong></span></h2>
-                            <h2 id="puzzlerace">Puzzle Race going to be <span style='color: red'> <strong>LIVE</strong></span> soon</h2>
+                        </marquee>
+                        <marquee behavior="alternate" direction="right">
+                            <h2 id="puzzlerace">Puzzle Race will be <span style='color: red'> <strong>LIVE</strong></span> soon!</h2>
                         </marquee>
                         <br><br>
                         <br>
@@ -39,10 +41,10 @@
                             <h1><u>Notifications</u></h1>
 
                             <ul>
-                                <li>
+                                <!-- <li>
                                     <h4>Puzzle Race Mock is <span style="color:red"><b>LIVE</b></span></h4>
                                     <a href="http://url.navprayas.in/puzzle-mock-2021" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
-                                </li>
+                                </li> -->
                                 <li>
                                     <h4>SyncWithDance Registration is <span style="color:red"><b>LIVE</b></span></h4>
                                     <a href="http://url.navprayas.in/SyncWithDance-2021" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
@@ -64,13 +66,11 @@
                                     <h4>NavRachna Registration is <span style="color:red "><b>LIVE</b></span></h4>
                                     <a href=" http://url.navprayas.in/navrachna-2021 " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li>
-<<<<<<< HEAD
                                 <!-- <li>
                                     <h4>Puzzle Race Registration is <span style="color:red "><b>LIVE</b></span></h4>
                                     <a href=" http://url.navprayas.in/puzzle-race-2021 " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
-                                </li> -->
-=======
->>>>>>> 00b2db00502d2e4b4e5044f304e9055bf68e5fc9
+                                    </li> -->
+
                                 <li>
                                     <h4>MTSE 2021 Registration is <span style="color:red "><b>LIVE</b></span></h4>
                                     <a href=" http://url.navprayas.in/MTSE2021 " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
