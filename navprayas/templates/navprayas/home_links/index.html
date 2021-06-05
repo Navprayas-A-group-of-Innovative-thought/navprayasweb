@@ -2,7 +2,23 @@
 <i style="color: white;font-size: 12px ;">
   Site last Updated at {{lastModified}}
 </i> {%endblock%} {% block content %}
+<style>
+    #puzzlerace{
+        animation: animate 1.5s linear infinite;
+    }
 
+    @keyframes animate{
+   0%{
+     opacity: 0;
+   }
+   50%{
+     opacity: 0.7;
+   }
+   100%{
+     opacity: 0;
+   }
+ }
+</style>
 
 <section class="section-gap achivement-area">
     <div class="container">
@@ -13,6 +29,7 @@
                     <div>
                         <marquee behavior="alternate" direction="right">
                             <h2>All Events are <span style='color: red'> <strong>FREE!</strong></span></h2>
+                            <h2 id="puzzlerace">Puzzle Race going to be <span style='color: red'> <strong>LIVE</strong></span> soon</h2>
                         </marquee>
                         <br><br>
                         <br>
