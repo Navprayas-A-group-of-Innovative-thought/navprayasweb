@@ -2,7 +2,23 @@
 <i style="color: white;font-size: 12px ;">
   Site last Updated at {{lastModified}}
 </i> {%endblock%} {% block content %}
+<style>
+    #puzzlerace{
+        animation: animate 1.5s linear infinite;
+    }
 
+    @keyframes animate{
+   0%{
+     opacity: 0;
+   }
+   50%{
+     opacity: 0.7;
+   }
+   100%{
+     opacity: 0;
+   }
+ }
+</style>
 
 <section class="section-gap achivement-area">
     <div class="container">
@@ -13,6 +29,7 @@
                     <div>
                         <marquee behavior="alternate" direction="right">
                             <h2>All Events are <span style='color: red'> <strong>FREE!</strong></span></h2>
+                            <h2 id="puzzlerace">Puzzle Race going to be <span style='color: red'> <strong>LIVE</strong></span> soon</h2>
                         </marquee>
                         <br><br>
                         <br>
@@ -22,6 +39,10 @@
                             <h1><u>Notifications</u></h1>
 
                             <ul>
+                                <li>
+                                    <h4>Puzzle Race Mock is <span style="color:red"><b>LIVE</b></span></h4>
+                                    <a href="http://url.navprayas.in/puzzle-mock-2021" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
+                                </li>
                                 <li>
                                     <h4>SyncWithDance Registration is <span style="color:red"><b>LIVE</b></span></h4>
                                     <a href="http://url.navprayas.in/SyncWithDance-2021" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
@@ -43,10 +64,13 @@
                                     <h4>NavRachna Registration is <span style="color:red "><b>LIVE</b></span></h4>
                                     <a href=" http://url.navprayas.in/navrachna-2021 " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li>
+<<<<<<< HEAD
                                 <!-- <li>
                                     <h4>Puzzle Race Registration is <span style="color:red "><b>LIVE</b></span></h4>
                                     <a href=" http://url.navprayas.in/puzzle-race-2021 " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li> -->
+=======
+>>>>>>> 00b2db00502d2e4b4e5044f304e9055bf68e5fc9
                                 <li>
                                     <h4>MTSE 2021 Registration is <span style="color:red "><b>LIVE</b></span></h4>
                                     <a href=" http://url.navprayas.in/MTSE2021 " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
@@ -116,7 +140,7 @@
                   class="lnr lnr-arrow-right "></span></a><br>
                         </div><br>
                         <div class="col-md-4 " style="padding: 2mm ">
-                            <a href="{% static 'img/swd_2021.jpeg' %} " class="img-pop-up ">
+                            <a href="{% static 'img/swd2021.jpeg' %} " class="img-pop-up ">
                                 <img src="{% static 'img/dance.jpg' %} " alt="MTSE " class="img-fluid "><br><br></a>
                             <a href="/events/#swd " class="primary-btn ">SyncWithDance<span class="lnr lnr-arrow-right "></span></a><br>
                         </div><br>
@@ -193,7 +217,7 @@
                         <div class="carousel-content">
                             <h2 class="text-white">NavRachna</h2>
                             <h5 class="text-white mb-20">Create with what you have</h5>
-                            <p class="text-white mb-30">Sit tight and be ready to portray your creativity into exciting models. "Navrachna"- create with what you have, a model making competition is back with a twist of using household materials for your creative models and get a
+                            <p class="text-white mb-30">Sit tight and be ready to portray your creativity into exciting models. "NavRachna"- Create with what you have, a model making competition is back with a twist of using household materials for your creative models and get a
                                 chance to prove the worth of your innovative ideas. Come forward and materialize your bizarre visualization.
                             </p>
                             <a href="http://url.navprayas.in/navrachna-2021" class="primary-btn white">Register Now<span
@@ -210,7 +234,7 @@
                 <div class="row align-items-center ">
                     <div class="col-xl-6 col-md-4 ">
                         <div class="carousel-thumb ">
-                            <img src="{% static 'img/swd_2021.jpeg' %} " alt=" " class="img-fluid ">
+                            <img src="{% static 'img/swd2021.jpeg' %} " alt=" " class="img-fluid ">
                         </div>
                     </div>
                     <div class="col-xl-6 col-md-7">
@@ -338,8 +362,8 @@
                             <h5 class="text-white mb-20 ">Let The Wits Race Against Time</h5>
                             <p class="text-white mb-30 ">
                                 No need to feel lethargic anymore peeps! Get ready to solve some brain teaser problems as well as mind-boggling puzzles with fun to do. NAVPRAYAS 2021 is thrilled to announce one of its iconic events: “PUZZLE RACE- Let The Wits Race Against Time”</p>
-                            <a href="http://url.navprayas.in/puzzle-race-2021 " class="primary-btn white " target="_blank ">Register Now<span
-                class="lnr lnr-arrow-right "></span></a>
+                            <!-- <a href="http://url.navprayas.in/puzzle-race-2021 " class="primary-btn white " target="_blank ">Register Now<span
+                class="lnr lnr-arrow-right "></span></a> -->
                         </div>
                     </div>
                 </div>
