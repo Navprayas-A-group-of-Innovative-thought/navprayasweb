@@ -5,20 +5,50 @@
 <style>
     #puzzlerace {
         animation: animate 0.5s linear infinite;
+        align-self: center;
     }
     
     @keyframes animate {
         0% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0;
+            color: brown;
         }
         100% {
-            opacity: 1;
+            color: darkblue;
         }
     }
 </style>
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 6, 2021 10:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("puzzlerace").innerHTML = "Puzzle race will be live in" +  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Puzzle Race is LIVE. Please visit exams.navaprayas.in";
+  }
+}, 1000);
+</script>
 
 <section class="section-gap achivement-area">
     <div class="container">
@@ -30,9 +60,9 @@
                         <marquee behavior="alternate" direction="right">
                             <h2>All Events are <span style='color: red'> <strong>FREE!</strong></span></h2>
                         </marquee>
-                        <marquee behavior="alternate" direction="right">
-                            <h2 id="puzzlerace">Puzzle Race will be <span style='color: red'> <strong>LIVE</strong></span> soon!</h2>
-                        </marquee>
+                        
+                        <h2 id="puzzlerace">Puzzle Race will be <span style='color: red'> <strong>LIVE</strong></span> soon!</h2>
+                        
                         <br><br>
                         <br>
 
