@@ -3,14 +3,14 @@
   Site last Updated at {{lastModified}}
 </i> {%endblock%} {% block content %}
 <script>
-var endtime =  new Date(2021, 5, 13, 10, 0, 0, 0);
+var endtime =  new Date(2021, 5, 10, 10, 0, 0, 0);
 const x = setInterval(function() {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
     const days = Math.floor(total / (1000 * 60 * 60 * 24));
-  document.getElementById("demo").innerHTML ='<h2 id = "MTSE">'+ "MTSE will be "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ " in  "+ days + "d " + hours + "h "
+  document.getElementById("demo").innerHTML ='<h2 id = "MTSE">'+ "MTSE Mock test will be "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ " in  "+ days + "d " + hours + "h "
   + minutes + "m " + seconds + "s " + '</h2>';
     
     const b = endtime.getTime();
@@ -18,7 +18,7 @@ const x = setInterval(function() {
     const diff = b - now;
   if (diff < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = '<h2 id = "MTSE">'+ "MTSE is "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ ". Please visit " + '<a href="http://exams.navprayas.in" target=" blank " class="primary-btn inNotificationArea ">' + "Here" + '</a>' + '</h2>';
+    document.getElementById("demo").innerHTML = '<h2 id = "MTSE">'+ "MTSE Mock test is "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ ". Please visit " + '<a href="http://exams.navprayas.in" target=" blank " class="primary-btn inNotificationArea ">' + "Here" + '</a>' + '</h2>';
   }
 }, 1000);
 </script>
