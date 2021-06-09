@@ -3,14 +3,14 @@
   Site last Updated at {{lastModified}}
 </i> {%endblock%} {% block content %}
 <script>
-var endtime =  new Date(2021, 5, 13, 10, 0, 0, 0);
+var endtime =  new Date(2021, 5, 10, 10, 0, 0, 0);
 const x = setInterval(function() {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
     const days = Math.floor(total / (1000 * 60 * 60 * 24));
-  document.getElementById("demo").innerHTML ='<h2 id = "MTSE">'+ "MTSE will be "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ " in  "+ days + "d " + hours + "h "
+  document.getElementById("demo").innerHTML ='<h2 id = "MTSE">'+ "MTSE Mock test will be "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ " in  "+ days + "d " + hours + "h "
   + minutes + "m " + seconds + "s " + '</h2>';
     
     const b = endtime.getTime();
@@ -18,7 +18,7 @@ const x = setInterval(function() {
     const diff = b - now;
   if (diff < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = '<h2 id = "MTSE">'+ "MTSE is "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ ". Please visit " + '<a href="http://exams.navprayas.in" target=" blank " class="primary-btn inNotificationArea ">' + "Here" + '</a>' + '</h2>';
+    document.getElementById("demo").innerHTML = '<h2 id = "MTSE">'+ "MTSE Mock test is "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ ". Please visit " + '<a href="http://exams.navprayas.in" target=" blank " class="primary-btn inNotificationArea ">' + "Here" + '</a>' + '</h2>';
   }
 }, 1000);
 </script>
@@ -63,10 +63,16 @@ const x = setInterval(function() {
                             <h1><u>Notifications</u></h1>
 
                             <ul>
-                                <!-- <li>
-                                    <h4>Puzzle Race Mock is <span style="color:red"><b>LIVE</b></span></h4>
-                                    <a href="http://url.navprayas.in/puzzle-mock-2021" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
-                                </li> -->
+                                <li>
+                                    <h4>Code Mantra Editorial is <span style="color:red"><b>LIVE</b></span></h4>
+                                    <a href="{% static 'Question/Codemantra 2021_Editorial.pdf' %}" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
+                                </li>
+
+                                <li>
+                                    <h4>Code Mantra Result is declared</h4>
+                                    <a href="{% static 'results/Codemantra_2021_result.pdf' %}" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
+                                </li>
+
                                 <li>
                                     <h4>SyncWithDance Registration is <span style="color:red"><b>LIVE</b></span></h4>
                                     <a href="http://url.navprayas.in/SyncWithDance-2021" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
@@ -106,10 +112,15 @@ const x = setInterval(function() {
                                     <h4>MTSE Previous Year Questions Released</h4>
                                     <a href="http://url.navprayas.in/mtse_previous_year " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li>
-                                <!-- <li>
-                                    <h4>Puzzle Race Previous Year Questions Released</h4>
-                                    <a href="http://url.navprayas.in/puzzlerace_previous_year " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
-                                </li> -->
+                                <li>
+                                    <h4>Puzzle Race Answer Key Released</h4>
+                                    <a href="http://url.navprayas.in/puzzlerace2021-answerkey " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
+                                </li>
+
+                                <li>
+                                    <h4>In case of any claims regarding Puzzle Race Answer Key</h4>
+                                    <a href="http://url.navprayas.in/claim-puzzle-2021 " target="blank " class="primary-btn inNotificationArea ">Claim Here<span class="lnr lnr-arrow-right "></span></a><br>
+                                </li>
 
                             </ul>
                         </div>
@@ -337,11 +348,14 @@ const x = setInterval(function() {
                             <h2 class="text-white ">इश्तिहार-ए-कला</h2>
                             <h5 class="text-white mb-20 ">Awareness by Art</h5>
                             <p class="text-white mb-30 ">
-                                NAVPRAYAS 2021 has released the second event: a poster making event (non-competitive awareness campaign) "ISHTIHAR-E-KALA(Awareness by Art) ", which is for EVERYONE!!!<br>Keeping the current scenario in mind and thinking
+                                NAVPRAYAS 2021 has released the second event: a poster making event (non-competitive awareness campaign) "इश्तिहार-ए-कला(Awareness by Art) ", which is for EVERYONE!!!<br>Keeping the current scenario in mind and thinking
                                 about the coming years, let the artist inside you arise and spill the colours to create vibrant posters for a great noble cause of making our society aware.
                             </p>
+
                             <!-- <a href="http://url.navprayas.in/ishtihar-e-kala " class="primary-btn white " target="_blank ">Register<span
                 class="lnr lnr-arrow-right "></span></a> -->
+                            <a href="http://url.navprayas.in/np-instagram" class="primary-btn white " target="_blank ">View Submissions<span
+                        class="lnr lnr-arrow-right "></span></a>
                         </div>
                     </div>
                 </div>
@@ -358,7 +372,7 @@ const x = setInterval(function() {
                     </div>
                     <div class="col-xl-6 col-md-7 ">
                         <div class="carousel-content ">
-                            <h2 class="text-white ">Awareness Programme on COVID-19</h2>
+                            <h1 class="text-white ">Awareness Programme on COVID-19</h1>
                             <p class="text-white mb-30 ">
                                 As we all are well aware of the current scenario of COVID-19, NAVPRAYAS team is pleased to announce the very first webinar of 2021 on “AWARENESS PROGRAMME ON COVID-19” with well-known speakers: Community Leader Mr. Prem Narayan Prasad, Social Activist
                                 Mr. Suraj Kumar, Dr. Kumar Vikram and IRS Pitamber Kumar.</p>
@@ -407,7 +421,7 @@ const x = setInterval(function() {
                                 A guide for choosing the right career path is a major aspect in one's life. A decision under the right guidance and with the right information is way better than taking clueless decisions. But don't worry, Navprayas is back again with "Career Counselling
                                 " for everyone where professionals will be sharing their experiences and will guide you to the right path.
                             </p>
-                            <a href="http://url.navprayas.in/career-counselling " class="primary-btn white ">Register<span
+                            <a href="http://url.navprayas.in/career_counselling_2021" class="primary-btn white ">Watch Now<span
                 class="lnr lnr-arrow-right "></span></a>
 
                         </div>
@@ -421,7 +435,7 @@ const x = setInterval(function() {
                 <div class="row align-items-center ">
                     <div class="col-xl-6 col-md-4 ">
                         <div class="carousel-thumb ">
-                            <img src="{% static 'img/codemantra21.jpeg' %} " alt="career counselling " class="img-fluid ">
+                            <img src="{% static 'img/codemantra21.jpeg' %} " alt="codemantra" class="img-fluid ">
                         </div>
                     </div>
                     <div class="col-xl-6 col-md-7 ">
@@ -432,7 +446,7 @@ const x = setInterval(function() {
                                 Time to heat up your system! The next exciting event of NAVPRAYAS'21 has been announced, “CODE MANTRA- Debug your Soul”. Have FOMO of getting TLE and Runtime Error? Code with us and improvise your coding skill. So, HYPE UP!! And create your own dazzling
                                 identity via coding. Are you ready to code?
                             </p>
-                            <a href="http://url.navprayas.in/code-mantra-2021 " class="primary-btn white ">Register Now<span
+                            <a href="{% static 'Question/Codemantra 2021_Editorial' %} " class="primary-btn white ">Editorial Released<span
                 class="lnr lnr-arrow-right "></span></a>
 
                         </div>
