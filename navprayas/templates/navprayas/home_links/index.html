@@ -3,22 +3,24 @@
   Site last Updated at {{lastModified}}
 </i> {%endblock%} {% block content %}
 <script>
-var endtime =  new Date(2021, 5, 13, 6, 30, 0, 0);
+var endtime =  new Date(2021, 5, 14, 8, 0, 0, 0);
 const x = setInterval(function() {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
     const days = Math.floor(total / (1000 * 60 * 60 * 24));
-  document.getElementById("demo").innerHTML ='<h2 id = "MTSE">'+ "MTSE  will be "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ " in  "+ days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s " + '</h2>';
+//   document.getElementById("demo").innerHTML ='<h2 id = "MTSE">'+ "MTSE  will be "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ " in  "+ days + "d " + hours + "h "
+//   + minutes + "m " + seconds + "s " + '</h2>';
     
     const b = endtime.getTime();
     const now = new Date().getTime();
     const diff = b - now;
   if (diff < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = '<h2 id = "MTSE">'+ "MTSE  is "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ ". Please visit " + '<a href="http://exams.navprayas.in" target=" blank " class="primary-btn inNotificationArea ">' + "Here" + '</a>' + '</h2>';
+    document.getElementById("demo").innerHTML = '<ul>'+ '<li>'+'<h4>'+ "MTSE answer key is "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ ". Please visit " + '<a href="http://url.navprayas.in/MTSE2021-answerkey" target=" blank " class="primary-btn inNotificationArea ">' + "Click Here" + '</a>' + '</h4>' + '</li>'+'<br>' + 
+    '<li>'+'<h4>'+ "MTSE Claim form  "+ '<a href="http://url.navprayas.in/MTSE-Stage1-claimform" target=" blank " class="primary-btn inNotificationArea ">' + "Click Here" + '</a>' + '(Deadline 15th June, 2021 5 PM)' + '</h4>' + '</li>'+ '<br>' +
+    '<li>'+'<h4>'+ "Please find your MTSE response  "+  '<a href="http://exams.navprayas.in" target=" blank " class="primary-btn inNotificationArea ">' + "Here" + '</a>' + "Please login using using your MTSE stage 1 login credentials"+'</h4>'+'</li>'+'</ul>';
   }
 }, 1000);
 </script>
@@ -63,15 +65,18 @@ const x = setInterval(function() {
                             <h1><u>Notifications</u></h1>
 
                             <ul>
+                            
+                                <h4 id = "demo"></h2>
+                            
                                 <li>
                                     <h4>Puzzle Race Final Answer Key</h4>
                                     <a href="http://url.navprayas.in/puzzlerace2021-answerkey " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li>
 
-                                <li>
+                                <!-- <li>
                                     <h4>Code Mantra Editorial is <span style="color:red"><b>LIVE</b></span></h4>
                                     <a href="{% static 'Question/Codemantra 2021_Editorial.pdf' %}" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
-                                </li>
+                                </li> -->
 
                                 <li>
                                     <h4>Code Mantra Result is declared</h4>
@@ -82,14 +87,14 @@ const x = setInterval(function() {
                                     <h4>SyncWithDance Registration is <span style="color:red"><b>LIVE</b></span></h4>
                                     <a href="http://url.navprayas.in/SyncWithDance-2021" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <h4>Kaavyakala Registration is <span style="color:red"><b>LIVE</b></span></h4>
                                     <a href="http://url.navprayas.in/kaavyakala-2021" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
-                                </li>
-                                <li>
+                                </li> -->
+                                <!-- <li>
                                     <h4>The Vocalist Registration is <span style="color:red"><b>LIVE</b></span></h4>
                                     <a href="http://url.navprayas.in/vocalist-2021" target=" blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
-                                </li>
+                                </li> -->
                                 <li>
                                     <h4>Awareness Webinar on COVID-19</h4>
                                     <a href="https://www.youtube.com/watch?v=TlF9FfcUDTY&t=1740s " target="blank " class="primary-btn inNotificationArea ">Watch Here<span class="lnr lnr-arrow-right "></span></a><br>
@@ -113,10 +118,10 @@ const x = setInterval(function() {
                                     <h4>How To Fill MTSE Form (Video Tutorial)</h4>
                                     <a href="http://link.navprayas.in/mtse_tutorial " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li> -->
-                                <li>
+                                <!-- <li>
                                     <h4>MTSE Previous Year Questions Released</h4>
                                     <a href="http://url.navprayas.in/mtse_previous_year " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
-                                </li>
+                                </li> -->
                                 
 
                                 <!-- <li>
