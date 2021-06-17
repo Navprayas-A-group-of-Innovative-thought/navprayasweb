@@ -2,48 +2,48 @@
 <i style="color: white;font-size: 12px ;">
   Site last Updated at {{lastModified}}
 </i> {%endblock%} {% block content %}
-<script>
-<<<<<<< HEAD
+<!-- <script>
     var endtime = new Date(2021, 5, 10, 10, 0, 0, 0);
-    const x = setInterval(function() {
-        const total = Date.parse(endtime) - Date.parse(new Date());
-        const seconds = Math.floor((total / 1000) % 60);
-        const minutes = Math.floor((total / 1000 / 60) % 60);
-        const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-        const days = Math.floor(total / (1000 * 60 * 60 * 24));
-        document.getElementById("demo").innerHTML = '<h2 id = "MTSE">' + "MTSE Mock test will be " + "<span style='color: red'> <strong>LIVE</strong></span>" + " in  " + days + "d " + hours + "h " +
-            minutes + "m " + seconds + "s " + '</h2>';
-
-        const b = endtime.getTime();
-        const now = new Date().getTime();
-        const diff = b - now;
-        if (diff < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = '<h2 id = "MTSE">' + "MTSE Mock test is " + "<span style='color: red'> <strong>LIVE</strong></span>" + ". Please visit " + '<a href="http://exams.navprayas.in" target=" blank " class="primary-btn inNotificationArea ">' + "Here" + '</a>' + '</h2>';
-        }
-    }, 1000);
-=======
-var endtime =  new Date(2021, 5, 14, 8, 0, 0, 0);
-const x = setInterval(function() {
-    const total = Date.parse(endtime) - Date.parse(new Date());
-    const seconds = Math.floor((total / 1000) % 60);
-    const minutes = Math.floor((total / 1000 / 60) % 60);
-    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-    const days = Math.floor(total / (1000 * 60 * 60 * 24));
-//   document.getElementById("demo").innerHTML ='<h2 id = "MTSE">'+ "MTSE  will be "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ " in  "+ days + "d " + hours + "h "
-//   + minutes + "m " + seconds + "s " + '</h2>';
-    
-    const b = endtime.getTime();
-    const now = new Date().getTime();
-    const diff = b - now;
-  if (diff < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = '<ul>'+ '<li>'+'<h4>'+ "MTSE answer key is "+ "<span style='color: red'> <strong>LIVE</strong></span>"+ ". Please visit " + '<a href="http://url.navprayas.in/MTSE2021-answerkey" target=" blank " class="primary-btn inNotificationArea ">' + "Click Here" + '</a>' + '</h4>' + '</li>'+'<br>' + 
-    '<li>'+'<h4>'+ "Please find your MTSE response Sheet "+  '<a href="http://exams.navprayas.in" target=" blank " class="primary-btn inNotificationArea ">' + "Here" + '</a>' + ". Please login using your MTSE stage 1 login credentials"+'</h4>'+'</li>'+'</ul>';
-  }
-}, 1000);
->>>>>>> abe043c8fae34d34ed1730374ad662dfabe3ab88
-</script>
+    const x = s etInterval(function() {
+                const total = D ate.parse(endtime) - Date.parse(new Date());
+                const seconds = M ath.floor((total / 1000) % 60);
+                const minutes = M ath.floor((total / 1000 / 60) % 60);
+                const hours = M ath.floor((total / (1000 * 60 * 60)) % 24);
+                const days = M ath.floor(total / (1000 * 60 * 60 * 24));
+                document.getElementById("demo").innerHTML = ' <
+                h2 id = "MTSE" > ' + "MTSE Mock test will be " + " <
+                span style = 'color: red' > < strong > LIVE < /strong></span > " + " in " + days + "
+                d " + hours + "
+                h " + minutes + "
+                m " + seconds + "
+                s " + '</h2>'; const b=e ndtime.getTime(); const now=n ew Date().getTime(); const diff=b - now; if (diff <
+                0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = '<h2 id = "MTSE">' + "MTSE Mock test is " + "<span style='color: red'> <strong>LIVE</strong></span>" + ". Please visit " +
+                    '<a href="http://exams.navprayas.in" target=" blank " class="primary-btn inNotificationArea ">' + "Here" + '</a>' + '</h2>';
+            }
+        },
+        1000);
+    var endtime = n ew Date(2021, 5, 14, 8, 0, 0, 0);
+    const x = s etInterval(function() {
+                const total = D ate.parse(endtime) - Date.parse(new Date());
+                const seconds = M ath.floor((total / 1000) % 60);
+                const minutes = M ath.floor((total /
+                    1000 / 60) % 60);
+                const hours = M ath.floor((total / (1000 * 60 * 60)) % 24);
+                const days = M ath.floor(total / (1000 * 60 * 60 * 24)); // document.getElementById( "demo").innerHTML='<h2 id = "MTSE">' + "MTSE  will be "+
+                "<span style='color: red'> <strong>LIVE</strong></span>" + " in  " + days + "d " + hours + "h " // + minutes + "m " + seconds + "s " + '</h2>'; const b=e ndtime.getTime(); const now=n ew Date().getTime(); const diff=b - now; if (diff < 0) { clearInterval(x); document.getElementById( "demo").innerHTML='<ul>'
+                    +
+                    '<li>' + '<h4>' + "MTSE answer key is " + "<span style='color: red'> <strong>LIVE</strong></span>" + ". Please visit " + '<a href="http://url.navprayas.in/MTSE2021-answerkey" target=" blank " class="primary-btn inNotificationArea ">' + "Click Here" +
+                    '</a>' + '</h4>' + '</li>' + '<br>' + '<li>' + '<h4>' + "Please find your MTSE response Sheet " + '<a href="http://exams.navprayas.in" target=" blank " class="primary-btn inNotificationArea ">' + "Here" + '</a>' +
+                    ". Please login using your MTSE stage 1 login credentials" + '</h4>' + '</li>' + '</ul>';
+            }
+        },
+        1000); >
+    >>
+    >>>
+    > abe043c8fae34d34ed1730374ad662dfabe3ab88
+</script> -->
 
 <style>
     #MTSE {
@@ -76,15 +76,8 @@ const x = setInterval(function() {
                         </marquee>
 
                         <!-- <h2 id="puzzlerace">Puzzle Race will be <span style='color: red'> <strong>LIVE</strong></span> at June 6th, 10:00 AM</h2> -->
-<<<<<<< HEAD
                         <h2 id="demo"></h2>
-
-
-=======
                         <!-- <h2 id="demo"></h2> -->
-                  
-                        
->>>>>>> abe043c8fae34d34ed1730374ad662dfabe3ab88
                         <br><br>
                         <br>
 
@@ -94,7 +87,6 @@ const x = setInterval(function() {
 
                             <ul>
                                 <li>
-<<<<<<< HEAD
                                     <h4>MTSE 2021 Stage-I Result is declared</h4><br>
                                     <a href="{% static 'results/Result Stage-I_Class 5.pdf' %}" target=" blank " class="primary-btn inNotificationArea ">Class 5<span class="lnr lnr-arrow-right "></span></a><br>
                                     <a href="{% static 'results/Result Stage-I_Class 6.pdf' %}" target=" blank " class="primary-btn inNotificationArea ">Class 6<span class="lnr lnr-arrow-right "></span></a><br>
@@ -104,7 +96,6 @@ const x = setInterval(function() {
                                     <a href="{% static 'results/Result Stage-I_Class 10.pdf' %}" target=" blank " class="primary-btn inNotificationArea ">Class 10<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li>
                                 <li>
-=======
                                     <h4>Puzzle Race Final Result</h4>
                                     <a href="http://url.navprayas.in/result-puzzle-2021 " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li>
@@ -117,9 +108,9 @@ const x = setInterval(function() {
                                     <a href="http://exams.navprayas.in" target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li>
 
-                            
-                                
-                            
+
+
+
                                 <li>
                                     <h4>Puzzle Race Final Answer Key</h4>
                                     <a href="http://url.navprayas.in/puzzlerace2021-answerkey " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
@@ -153,36 +144,35 @@ const x = setInterval(function() {
                                     <a href="https://www.youtube.com/watch?v=TlF9FfcUDTY&t=1740s " target="blank " class="primary-btn inNotificationArea ">Watch Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li>
 
-<<<<<<< HEAD
-                                <li>
+                                <<<<<<< HEAD <li>
                                     <h4>NavRachna Registration is <span style="color:red "><b>closed.</b></span></h4>
-=======
-                                <!-- <li>
+                                    =======
+                                    <!-- <li>
                                     <h4>NavRachna Registration is <span style="color:red "><b>LIVE</b></span></h4>
 >>>>>>> abe043c8fae34d34ed1730374ad662dfabe3ab88
                                     <a href=" http://url.navprayas.in/navrachna-2021 " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li> -->
-                                <!-- <li>
+                                    <!-- <li>
                                     <h4>Puzzle Race Registration is <span style="color:red "><b>LIVE</b></span></h4>
                                     <a href=" http://url.navprayas.in/puzzle-race-2021 " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                     </li> -->
 
-                                <!-- <li>
+                                    <!-- <li>
                                     <h4>MTSE 2021 Registration is <span style="color:red "><b>LIVE</b></span></h4>
                                     <a href=" http://url.navprayas.in/MTSE2021 " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li> -->
 
-                                <!-- <li>
+                                    <!-- <li>
                                     <h4>How To Fill MTSE Form (Video Tutorial)</h4>
                                     <a href="http://link.navprayas.in/mtse_tutorial " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li> -->
-                                <!-- <li>
+                                    <!-- <li>
                                     <h4>MTSE Previous Year Questions Released</h4>
                                     <a href="http://url.navprayas.in/mtse_previous_year " target="blank " class="primary-btn inNotificationArea ">Click Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li> -->
-                                
 
-                                <!-- <li>
+
+                                    <!-- <li>
                                     <h4>In case of any claims regarding Puzzle Race Answer Key (Deadline: 9 June)</h4>
                                     <a href="http://url.navprayas.in/claim-puzzle-2021 " target="blank " class="primary-btn inNotificationArea ">Claim Here<span class="lnr lnr-arrow-right "></span></a><br>
                                 </li> -->
@@ -465,7 +455,7 @@ const x = setInterval(function() {
                                 No need to feel lethargic anymore peeps! Get ready to solve some brain teaser problems as well as mind-boggling puzzles with fun to do. NAVPRAYAS 2021 is thrilled to announce one of its iconic events: “PUZZLE RACE- Let The Wits Race Against Time”</p>
                             <!-- <a href="http://url.navprayas.in/puzzle-race-2021 " class="primary-btn white " target="_blank ">Register Now<span
                 class="lnr lnr-arrow-right "></span></a> -->
-                <a href="{% static 'rules/Puzzle Race 2021.pdf' %}" class="primary-btn white " target="_blank ">Know More<span
+                            <a href="{% static 'rules/Puzzle Race 2021.pdf' %}" class="primary-btn white " target="_blank ">Know More<span
                     class="lnr lnr-arrow-right "></span></a>
                         </div>
                     </div>
