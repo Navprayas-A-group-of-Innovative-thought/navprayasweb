@@ -1,105 +1,104 @@
-{% extends "navprayas/base.html" %}
-{% load crispy_forms_tags %}
-
-{% block content %}
+{% extends "navprayas/base.html" %} {% load crispy_forms_tags %} {% block content %}
 <style>
-.inline {
-   display: inline-block;
-}
+    .inline {
+        display: inline-block;
+    }
 </style>
 <section class="section-gap achivement-area">
-        <div class="container">
-          <div class="row">
+    <div class="container">
+        <div class="row">
             <div style="color: #e0003b; text-align: center;">
-            <h3 style="color: #e0003b; ">MTSE Stage-I results of all the classes</h3>
-          </div>
-             <div>
-                  <marquee behavior="scroll" direction="left"><h3>Selected students please report to Navprayas office with their 
-                    <span style="color: #e0003b">admit card</span> by 15 Jun 2019 at Navprayas Help Desk at Durga Asthan.</h3></marquee>
-                  
-                </div>
-                <div>
-                  <h2 style="color: #e0003b">Selected students must read Instruction given <a href="http://navprayas.in/static/results/instruction.pdf">Here</a></h2>
-                </div>
+                <h3 style="color: #e0003b; ">MTSE Stage-I results of all the classes</h3>
+            </div>
+            <div>
+                <!-- <marquee behavior="scroll" direction="left">
+                    <h3>Selected students please report to Navprayas office with their
+                        <span style="color: #e0003b">admit card</span> by 15 Jun 2019 at Navprayas Help Desk at Durga Asthan.</h3>
+                </marquee> -->
+
+            </div>
+            <div>
+                <h2 style="color: hsl(256, 100%, 44%)">Selected students must check their registered mail.</h2>
+            </div>
             <div class="col-lg-5">
                 <div>
-                <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
-                    <img src="http://navprayas.in/static/img/5.png" width="140px" height="75px" alt="Class 5 result">
-                  </div>
-                  <div>
-                  <a href="http://navprayas.in/static/results/mtse_result_5.pdf" download>
-                    <button type="button" >Download</button>
-                  </a>
-                  <a href="http://navprayas.in/static/results/mtse_result_5.pdf" >
-                    <button type="button" >View</button>
-                  </a>
-                </div>
-                <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
-                  <div height>
-                    <img src="http://navprayas.in/static/img/6.png" width="140px" height="75px" alt="Class 6 result">
-                  </div>
-                  <div>
-                  <a href="http://navprayas.in/static/results/mtse_result_6.pdf" download>
-                    <button type="button" >Download</button>
-                  </a>
-                  <a href="http://navprayas.in/static/results/mtse_result_6.pdf" >
-                    <button type="button" >View</button>
-                  </a>
-                </div>
-                <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
-                  <div height>
-                    <img src="http://navprayas.in/static/img/7.png" width="140px" height="75px" alt="Class 7 result">
-                  </div>
-                  <div>
-                  <a href="http://navprayas.in/static/results/mtse_result_7.pdf" download>
-                    <button type="button" >Download</button>
-                  </a>
-                  <a href="http://navprayas.in/static/results/mtse_result_7.pdf" >
-                    <button type="button" >View</button>
-                  </a>
-                </div>
-              </div>
-              <div>
-                <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
-                  <div height>
-                    <img src="http://navprayas.in/static/img/8.png" width="140px" height="75px" alt="Class 8 result">
-                  </div>
-                  <div>
-                  <a href="http://navprayas.in/static/results/mtse_result_8.pdf" download>
-                    <button type="button" >Download</button>
-                  </a>
-                  <a href="http://navprayas.in/static/results/mtse_result_8.pdf" >
-                    <button type="button" >View</button>
-                  </a>
-                </div>
-                <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
-                  <div height>
-                    <img src="http://navprayas.in/static/img/9.png" width="140px" height="75px" alt="Class 9 result">
-                  </div>
-                  <div>
-                  <a href="http://navprayas.in/static/results/mtse_result_9.pdf" download>
-                    <button type="button" >Download</button>
-                  </a>
-                  <a href="http://navprayas.in/static/results/mtse_result_9.pdf" >
-                    <button type="button" >View</button>
-                  </a>
-                </div>
-                <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
-                  <div height>
-                    <img src="http://navprayas.in/static/img/10.png" width="140px" height="75px" alt="Class 10 result">
-                  </div>
-                  <div>
-                  <a href="http://navprayas.in/static/results/mtse_result_10.pdf" download>
-                    <button type="button" >Download</button>
-                  </a>
-                  <a href="http://navprayas.in/static/results/mtse_result_10.pdf" >
-                    <button type="button" >View</button>
-                  </a>
-                </div>
-                </div>
-            </div>
-          </div>
-        </div>
+                    <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
+                        <img src="http://navprayas.in/static/img/5.png" width="140px" height="75px" alt="Class 5 result">
+                    </div>
+                    <div>
+                        <a href="http://navprayas.in/static/results/Result Stage-I_Class 5.pdf" download>
+                            <button type="button">Download</button>
+                        </a>
+                        <a href="http://navprayas.in/static/results/Result Stage-I_Class 5.pdf">
+                            <button type="button">View</button>
+                        </a>
+                    </div>
+                    <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
+                        <div height>
+                            <img src="http://navprayas.in/static/img/6.png" width="140px" height="75px" alt="Class 6 result">
+                        </div>
+                        <div>
+                            <a href="http://navprayas.in/static/results/Result Stage-I_Class 6.pdf" download>
+                                <button type="button">Download</button>
+                            </a>
+                            <a href="http://navprayas.in/static/results/Result Stage-I_Class 6.pdf">
+                                <button type="button">View</button>
+                            </a>
+                        </div>
+                        <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
+                            <div height>
+                                <img src="http://navprayas.in/static/img/7.png" width="140px" height="75px" alt="Class 7 result">
+                            </div>
+                            <div>
+                                <a href="http://navprayas.in/static/results/Result Stage-I_Class 7.pdf" download>
+                                    <button type="button">Download</button>
+                                </a>
+                                <a href="http://navprayas.in/static/results/Result Stage-I_Class 7.pdf">
+                                    <button type="button">View</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
+                                <div height>
+                                    <img src="http://navprayas.in/static/img/8.png" width="140px" height="75px" alt="Class 8 result">
+                                </div>
+                                <div>
+                                    <a href="http://navprayas.in/static/results/Result Stage-I_Class 8.pdf" download>
+                                        <button type="button">Download</button>
+                                    </a>
+                                    <a href="http://navprayas.in/static/results/Result Stage-I_Class 8.pdf">
+                                        <button type="button">View</button>
+                                    </a>
+                                </div>
+                                <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
+                                    <div height>
+                                        <img src="http://navprayas.in/static/img/9.png" width="140px" height="75px" alt="Class 9 result">
+                                    </div>
+                                    <div>
+                                        <a href="http://navprayas.in/static/results/Class 9.pdf" download>
+                                            <button type="button">Download</button>
+                                        </a>
+                                        <a href="http://navprayas.in/static/results/Class 9.pdf">
+                                            <button type="button">View</button>
+                                        </a>
+                                    </div>
+                                    <div id="class-5" class="inline" style="height: 120px; width: 150px;  ">
+                                        <div height>
+                                            <img src="http://navprayas.in/static/img/10.png" width="140px" height="75px" alt="Class 10 result">
+                                        </div>
+                                        <div>
+                                            <a href="http://navprayas.in/static/results/Class 10.pdf" download>
+                                                <button type="button">Download</button>
+                                            </a>
+                                            <a href="http://navprayas.in/static/results/Class 10.pdf">
+                                                <button type="button">View</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 </section>
 <!-- <section class="section-gap achivement-area">
 	<div class="container">
@@ -129,5 +128,4 @@
 		</div>
 	</div>
 </section> -->
-{% endblock  %}
-
+{% endblock %}
