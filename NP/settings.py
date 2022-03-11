@@ -24,7 +24,7 @@ PRODUCTION_MODE = os.getenv('PRODUCTION_MODE', 'local')
 SECRET_KEY = 'ivj2nwdhabo25f7x*^_n8*-gw+%_dg0=2ggh%5z_r*%c7av3&*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False if PRODUCTION_MODE in ['production'] else True
+DEBUG = os.getenv('DEBUG', 'false') == 'true'
 
 ALLOWED_HOSTS = [
     '192.168.43.186','www.navprayas.in','navprayas.in','127.0.0.1','localhost','0.0.0.0','herokuapp.navprayasweb.com',
