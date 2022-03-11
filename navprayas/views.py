@@ -11,18 +11,18 @@ from django.views.decorators.csrf import csrf_exempt
 from navprayas import checksum as Checksum
 from django.contrib import messages
 from django.core.mail import send_mail
+from NP.settings import LAST_MODIFIED
 #from django.contrib.auth.models import User
 
 
-
-from secret import *
+from NP.settings import PAYMENT_MERCHANT_KEY
 import string
 import random
 TRN_DIGITS = 9
 def OID(size=TRN_DIGITS, chars=string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 
-MERCHANT_KEY = Secret.PAYMENT_MERCHANT_KEY
+MERCHANT_KEY = PAYMENT_MERCHANT_KEY
 CHESS_FEE   = '15'
 MTSE_FEE    = '25'
 FHS_FEE     = '10'
@@ -32,17 +32,8 @@ PR_FEE      = '40'
 
 # Create your views here.
 def index(request):
-    from .lastModified import lastModified
-    lm = lastModified.date
-
-    try:
-        if request.headers['x-forwarded-proto'] != 'https':
-            return redirect("https://navprayas.in")
-    except:
-        pass
-
     return render(request, 'navprayas/home_links/index.html', {
-        'lastModified' : lm
+        'lastModified' : LAST_MODIFIED
     })
 
 def about(request):

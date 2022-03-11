@@ -11,17 +11,17 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-from secret import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+PRODUCTION_MODE = os.getenv('PRODUCTION_MODE', 'local')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = Secret.PROJECT_SECRET_KEY
+SECRET_KEY = 'ivj2nwdhabo25f7x*^_n8*-gw+%_dg0=2ggh%5z_r*%c7av3&*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,10 +81,16 @@ WSGI_APPLICATION = 'NP.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# creating folders for db
+db_path = os.path.join(BASE_DIR, 'db', PRODUCTION_MODE)
+if not os.path.exists(db_path):
+    os.makedirs(db_path)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR,'db', PRODUCTION_MODE, 'db.sqlite3'),
+        'TIME_ZONE': 'Asia/Calcutta'
     }
 }
 
@@ -94,13 +100,7 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
@@ -112,30 +112,18 @@ AUTH_PASSWORD_VALIDATORS = [
 #EMAIL_HOST = 'localhost'
 #EMAIL_PORT = 1025
 
-
-# for getting email to reset password using gmail
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = Secret.USERID_FOR_EMAIL
-EMAIL_HOST_PASSWORD = Secret.PASS_FOR_EMAIL
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
-
 USE_I18N = True
 
 USE_L10N = True
 
 USE_TZ = True
+
 TIME_ZONE =  'Asia/Calcutta'
 
 # Static files (CSS, JavaScript, Images)
@@ -150,7 +138,15 @@ LOGOUT_REDIRECT_URL = '/index/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-SECURE_SSL_REDIRECT = False
-
 # Needed to be written explicitly since Django 3.2
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+LAST_MODIFIED = os.getenv('last_modified')
+
+if PRODUCTION_MODE in ['development', 'production']:
+    print('using production settings')
+    from NP.settings_env import *
+else:
+    print('using local settings')
+    from NP.settings_local import *
+
