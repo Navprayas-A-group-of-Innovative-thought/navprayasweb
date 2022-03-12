@@ -142,7 +142,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Needed to be written explicitly since Django 3.2
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-LAST_MODIFIED = os.getenv('last_modified')
+from datetime import datetime
+LAST_MODIFIED = str(datetime.now())
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
